@@ -26,6 +26,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18.14
+      - name: Configure Git
+        run: |
+          git config --global user.email "zhangpeng19960211@gmail.com"
+          git config --global user.name "zephyr-coding"
       - name: Update Submodule
         run: |
           git submodule update --remote --merge
